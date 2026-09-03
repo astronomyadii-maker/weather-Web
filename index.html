@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyline — check the sky before you go</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="PROJECT\script.js"></script>
+  <div class="sky" id="sky"></div>
+
+  <main class="stage">
+    <header class="masthead">
+      <span class="eyebrow">SKYLINE</span>
+      <span class="clock" id="localClock">--:--</span>
+    </header>
+
+    <form class="search" id="searchForm" autocomplete="off">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Search a city — try “London”"
+        aria-label="City name"
+        required
+      >
+      <button type="submit" id="searchBtn">
+        <span>Look up</span>
+      </button>
+    </form>
+
+    <p class="status" id="status" aria-live="polite"></p>
+
+    <section class="result" id="result" hidden>
+      <div class="result-top">
+        <div class="place">
+          <h1 id="cityName">—</h1>
+          <p id="regionCountry">—</p>
+          <p class="updated" id="updatedAt">—</p>
+        </div>
+        <img id="conditionIcon" class="icon" alt="" width="84" height="84">
+      </div>
+
+      <div class="temp-row">
+        <span class="temp" id="tempC">--°</span>
+        <span class="condition" id="conditionText">—</span>
+      </div>
+      <p class="feels" id="feelsLike">—</p>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Wind</span>
+          <span class="stat-value" id="wind">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Humidity</span>
+          <span class="stat-value" id="humidity">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">UV index</span>
+          <span class="stat-value" id="uv">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Air quality</span>
+          <span class="stat-value" id="aqi">—</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
